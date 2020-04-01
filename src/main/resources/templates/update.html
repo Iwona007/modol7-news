@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit News</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+<h3>Edite News</h3>
+<form th:action="@{/news/update}" th:object="${newresultdb}" method="post">
+    <p>Brand: <input type="text" th:field="*{resId}" readonly></p>
+    <p>Model: <input type="text" th:field="*{type}"></p>
+    <p>Color: <input type="text" th:field="*{sectionName}"></p>
+    <p>Color: <input type="text" th:field="*{webTitle}"></p>
+    <p>Color: <input type="text" th:field="*{webUrl}"></p>
+    <input type="submit" value="Save ">
+</form>
+
+</body>
+
+</html>
