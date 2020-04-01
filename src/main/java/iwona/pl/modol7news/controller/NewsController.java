@@ -1,8 +1,6 @@
 package iwona.pl.modol7news.controller;
 
 
-
-import iwona.pl.modol7news.dao.DaoImpl;
 import iwona.pl.modol7news.model.ResultDb;
 import iwona.pl.modol7news.service.NewsService;
 import org.springframework.stereotype.Controller;
