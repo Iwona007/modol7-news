@@ -1,26 +1,28 @@
 package iwona.pl.modol7news.model;
 
+import java.net.URL;
+
 public class ResultDb {
 
     private long resId;
     private String type;
     private String sectionName;
     private String webTitle;
-    private String webUrl;
+    private URL webUrl1;
 
-    public ResultDb(long resId, String type, String sectionName, String webTitle, String webUrl) {
+    public ResultDb(long resId, String type, String sectionName, String webTitle,  URL webUrl1) {
         this.resId = resId;
         this.type = type;
         this.sectionName = sectionName;
         this.webTitle = webTitle;
-        this.webUrl = webUrl;
+        this.webUrl1 = webUrl1;
     }
 
-    public ResultDb(String type, String sectionName, String webTitle, String webUrl) {
+    public ResultDb(String type, String sectionName, String webTitle,  URL webUrl1) {
         this.type = type;
         this.sectionName = sectionName;
         this.webTitle = webTitle;
-        this.webUrl = webUrl;
+        this.webUrl1 = webUrl1;
     }
 
         public ResultDb() {
@@ -58,12 +60,12 @@ public class ResultDb {
         this.webTitle = webTitle;
     }
 
-    public String getWebUrl() {
-        return webUrl;
+    public  URL getWebUrl1() {
+        return webUrl1;
     }
 
-    public void setWebUrl(String webUrl) {
-        this.webUrl = webUrl;
+    public void setWebUrl1( URL webUrl) {
+        this.webUrl1 = webUrl1;
     }
 
     @Override

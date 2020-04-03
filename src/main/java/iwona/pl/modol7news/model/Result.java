@@ -1,6 +1,7 @@
 package iwona.pl.modol7news.model;
 
 import com.fasterxml.jackson.annotation.*;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -46,21 +47,30 @@ public class Result {
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
     private long resId;
 
+    public URL getWebUrl1() {
+        return webUrl1;
+    }
 
-    public Result(long resId, String type, String sectionName, String webTitle, String webUrl) {
+    public void setWebUrl1(URL webUrl1) {
+        this.webUrl1 = webUrl1;
+    }
+
+    private URL webUrl1;
+
+    public Result(long resId, String type, String sectionName, String webTitle, URL webUrl1) {
         this.resId = resId;
         this.type = type;
         this.sectionName = sectionName;
         this.webTitle = webTitle;
-        this.webUrl = webUrl;
+        this.webUrl1 = webUrl1;
     }
 
-    public Result(String type, String sectionName, String webPublicationDate, String webTitle, String webUrl) {
+    public Result(String type, String sectionName, String webPublicationDate, String webTitle, URL webUrl1) {
         this.type = type;
         this.sectionName = sectionName;
         this.webPublicationDate = webPublicationDate;
         this.webTitle = webTitle;
-        this.webUrl = webUrl;
+        this.webUrl1 = webUrl1;
     }
 
     public Result() {

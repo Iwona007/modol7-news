@@ -9,6 +9,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.util.UriTemplateHandler;
 
 @Service
 public class NewsService {
@@ -26,6 +27,7 @@ public class NewsService {
     RestTemplate restTemplate = new RestTemplate();
     TheGuardian response = restTemplate.getForObject("https://content.guardianapis.com/search?&api-key=" + APIKEY,
                 TheGuardian.class);
+    UriTemplateHandler uriTemplateHandler = restTemplate.getUriTemplateHandler();
 //        System.out.println(response);
     return response;
   }
@@ -42,7 +44,7 @@ public class NewsService {
                     theGuardianInfo().getResponse().getResults().get(i).getType(),
                     theGuardianInfo().getResponse().getResults().get(i).getSectionName(),
                     theGuardianInfo().getResponse().getResults().get(i).getWebTitle(),
-                    theGuardianInfo().getResponse().getResults().get(i).getWebUrl());
+                    theGuardianInfo().getResponse().getResults().get(i).getWebUrl1());
     }
   }
 
