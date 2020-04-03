@@ -9,16 +9,45 @@
 
 </head>
 <body>
-<h3>Edite News</h3>
-<form th:action="@{/news/update}" th:object="${newresultdb}" method="post">
-    <p>Brand: <input type="text" th:field="*{resId}" readonly></p>
-    <p>Model: <input type="text" th:field="*{type}"></p>
-    <p>Color: <input type="text" th:field="*{sectionName}"></p>
-    <p>Color: <input type="text" th:field="*{webTitle}"></p>
-    <p>Color: <input type="text" th:field="*{webUrl1}"></p>
-    <input type="submit" value="Save ">
-</form>
+<div class="p-3 mb-2 bg-dark text-white">
+    <h3>Edite News</h3>
+    <!--<form th:action="@{/news/update}" th:object="${newresultdb}" method="post">-->
+    <!--    <p>News Id: <input type="text" th:field="*{resId}" readonly></p>-->
+    <!--    <p>Type: <input type="text" th:field="*{type}"></p>-->
+    <!--    <p>Section Name: <input type="text" th:field="*{sectionName}"></p>-->
+    <!--    <p>Web title: <input type="text" th:field="*{webTitle}"></p>-->
+    <!--    <p>Web Url: <input type="text" th:field="*{webUrl}"></p>-->
+    <!--  <button type="submit" class="btn btn-success" value="Save"> Save </button>-->
+    <!--</form>-->
+    <form th:action="@{/news/update}" th:object="${newresultdb}" method="post">
 
+        <div class="form-group col-md-2">
+            <label for="News Id">News Id</label>
+            <input type="text" id="News Id" class="form-control" th:field="*{resId}" readonly>
+        </div>
+        <br>
+        <div class="form-group col-md-2">
+            <label for="type">Type</label>
+            <input type="text" id="type" class="form-control" th:field="*{type}">
+        </div>
+        <br>
+        <div class="form-group col-md-2">
+            <label for="sectionName">Section Name</label>
+            <input type="text" id="sectionName" class="form-control" th:field="*{sectionName}">
+        </div>
+        <br>
+        <div class="form-group col-md-8">
+            <label for="Web title">Web title</label>
+            <input type="text" class="form-control" id="Web title" th:field="*{webTitle}">
+        </div>
+        <br>
+        <div class="form-group col-md-8">
+            <label for="Web Url">Web Url</label>
+            <input type="text" class="form-control" id="Web Url" th:field="*{webUrl}" readonly>
+        </div>
+          <button type="submit" class="btn btn-success" value="Save"> Save </button>
+    </form>
+</div>
 </body>
 
 </html>

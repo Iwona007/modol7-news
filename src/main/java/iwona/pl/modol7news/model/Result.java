@@ -47,30 +47,25 @@ public class Result {
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
     private long resId;
 
-    public URL getWebUrl1() {
-        return webUrl1;
-    }
-
-    public void setWebUrl1(URL webUrl1) {
-        this.webUrl1 = webUrl1;
-    }
-
-    private URL webUrl1;
-
-    public Result(long resId, String type, String sectionName, String webTitle, URL webUrl1) {
+    public Result(long resId, String type, String sectionName, String webTitle, String webUrl) {
         this.resId = resId;
         this.type = type;
         this.sectionName = sectionName;
         this.webTitle = webTitle;
-        this.webUrl1 = webUrl1;
+        this.webUrl = webUrl;
     }
 
-    public Result(String type, String sectionName, String webPublicationDate, String webTitle, URL webUrl1) {
+    public Result(long resId,  String webUrl) {
+        this.resId = resId;
+        this.webUrl = webUrl;
+    }
+
+    public Result(String type, String sectionName, String webPublicationDate, String webTitle, String webUrl) {
         this.type = type;
         this.sectionName = sectionName;
         this.webPublicationDate = webPublicationDate;
         this.webTitle = webTitle;
-        this.webUrl1 = webUrl1;
+        this.webUrl = webUrl;
     }
 
     public Result() {

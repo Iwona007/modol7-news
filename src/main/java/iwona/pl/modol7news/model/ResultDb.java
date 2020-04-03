@@ -8,21 +8,26 @@ public class ResultDb {
     private String type;
     private String sectionName;
     private String webTitle;
-    private URL webUrl1;
+    private String webUrl;
 
-    public ResultDb(long resId, String type, String sectionName, String webTitle,  URL webUrl1) {
+    public ResultDb(long resId, String type, String sectionName, String webTitle,  String webUrl) {
         this.resId = resId;
         this.type = type;
         this.sectionName = sectionName;
         this.webTitle = webTitle;
-        this.webUrl1 = webUrl1;
+        this.webUrl = webUrl;
     }
 
-    public ResultDb(String type, String sectionName, String webTitle,  URL webUrl1) {
+    public ResultDb(String type, String sectionName, String webTitle,  String webUrl) {
         this.type = type;
         this.sectionName = sectionName;
         this.webTitle = webTitle;
-        this.webUrl1 = webUrl1;
+        this.webUrl = webUrl;
+    }
+
+    public ResultDb(long resId,  String webUrl) {
+        this.resId = resId;
+        this.webUrl = webUrl;
     }
 
         public ResultDb() {
@@ -60,12 +65,12 @@ public class ResultDb {
         this.webTitle = webTitle;
     }
 
-    public  URL getWebUrl1() {
-        return webUrl1;
+    public String getWebUrl() {
+        return webUrl;
     }
 
-    public void setWebUrl1( URL webUrl) {
-        this.webUrl1 = webUrl1;
+    public void setWebUrl(String webUrl) {
+        this.webUrl = webUrl;
     }
 
     @Override

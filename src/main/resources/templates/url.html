@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Url</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+
+<h3>Show Url </h3>
+
+    <form th:action="@{/news/url}" th:object="${newUrl}" method="post">
+        <div class="form-row bg-dark text-white">
+        <div class="form-group col-md-2">
+            <label for="resId">News Id</label>
+            <input type="text" class="form-control" id="resId" th:field="*{resId}" readonly>
+
+        </div>
+        <div class="form-group col-md-9">
+            <label for="web Url">Web Url</label><a th:href="${newUrl.getWebUrl()}"/>
+            <input type="text" class="form-control" id="web Url" th:field="*{webUrl}" readonly>
+        </div>
+</div>
+</form>
+
+</body>
+
+</html>
