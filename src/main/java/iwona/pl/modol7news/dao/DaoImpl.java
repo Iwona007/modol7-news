@@ -68,12 +68,10 @@ public class DaoImpl implements DaoRepo {
                 resultSet.getString("web_url")), resId);
     }
 
-
     @Override
     public void delete(long resId) {
         String sql = "DELETE FROM " + NAME + " WHERE res_id = ?";
         jdbcTemplate.update(sql, resId);
     }
-
 }
 

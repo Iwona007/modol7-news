@@ -17,5 +17,4 @@ public interface DaoRepo {
   ResultDb search(long resId);
 
   void delete(long resId);
-
 }
