@@ -13,4 +13,10 @@ Maven
 JDBC: remotemySql
 RestClient
 
-![snapshot]
+GUI: all news
+![snapshot](https://github.com/Iwona007/modol7-news/blob/feature1/images/frontend.PNG)
+one URL
+![snapshot](https://github.com/Iwona007/modol7-news/blob/feature1/images/URL.PNG)
+edit new
+![snapshot](https://github.com/Iwona007/modol7-news/blob/feature1/images/edit-news.PNG)
+
