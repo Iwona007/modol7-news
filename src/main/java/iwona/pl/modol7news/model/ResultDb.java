@@ -1,7 +1,5 @@
 package iwona.pl.modol7news.model;
 
-import java.net.URL;
-
 public class ResultDb {
 
     private long resId;
@@ -17,19 +15,16 @@ public class ResultDb {
         this.webTitle = webTitle;
         this.webUrl = webUrl;
     }
-
     public ResultDb(String type, String sectionName, String webTitle,  String webUrl) {
         this.type = type;
         this.sectionName = sectionName;
         this.webTitle = webTitle;
         this.webUrl = webUrl;
     }
-
     public ResultDb(long resId,  String webUrl) {
         this.resId = resId;
         this.webUrl = webUrl;
     }
-
         public ResultDb() {
     }
 

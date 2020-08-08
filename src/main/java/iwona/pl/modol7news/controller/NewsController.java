@@ -3,7 +3,6 @@ package iwona.pl.modol7news.controller;
 
 import iwona.pl.modol7news.model.ResultDb;
 import iwona.pl.modol7news.service.NewsService;
-import java.net.URL;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -44,14 +43,6 @@ public class NewsController {
         model.addAttribute("newUrl", newsService.getId(resId));
         return "url";
     }
-
-//    @PostMapping("/url/{resId}")
-//    public String url(@PathVariable Integer resId) {
-////    System.out.println(url);
-//        newsService.search(resId);
-////        newsService.search(webUrl1);
-//        return "redirect:/news";
-//    }
 
     @GetMapping("/delete/{resId}")
     public String delete(@PathVariable long resId) {

@@ -4,19 +4,16 @@ package iwona.pl.modol7news.service;
 import iwona.pl.modol7news.dao.DaoRepo;
 import iwona.pl.modol7news.model.ResultDb;
 import iwona.pl.modol7news.model.TheGuardian;
-import java.net.URL;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.web.util.UriTemplateHandler;
 
 @Service
 public class NewsService {
 
     private static final String APIKEY = "44109c22-7967-49e2-bc13-0cb54c6bf0ab";
     private DaoRepo daoRepo;
-
     @Autowired
     public NewsService(DaoRepo daoRepo) {
         this.daoRepo = daoRepo;

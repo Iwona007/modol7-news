@@ -22,6 +22,7 @@ public class DbConfig {
     return new JdbcTemplate(dataSource);
   }
 
+// only in order to fill in DB.
 //    @EventListener(ApplicationReadyEvent.class)
 //    public void initResult() {
 //        String sql = "CREATE TABLE info(res_id int auto_increment, type varchar (255), section_name varchar(255)," +
@@ -35,6 +36,4 @@ public class DbConfig {
 //        sql = "DROP TABLE IF EXISTS info";
 //        jdbcTemplate().update(sql);
 //    }
-
-
 }
